@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge: Encriptador de texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"> </script>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="./assets/images.png" alt="logo" class="logo"></div>
+    </header>
+    <main class="inicio">
+       
+        
+        <section class="inicio_izquierdo">
+
+            <div></div>
+
+            <div class="texto"><textarea name="texto" class="textarea" onkeypress="return (event.charCode >= 97 && event.charCode <= 122)" autocomplete="on" oninput="validarmensaje()" id="inicio_texto" cols="30" rows="10" placeholder="Ingrese el texto aqui" required></textarea></div>
+            
+            <div class="texto">
+                <p class="parrafo"><img src="./assets/advertencia.png" alt="advertencia" width="20px" height="20px"> Debido a los poderes del bebe Yoda no puedes escribir Mayusculas, ni caracteres especiales aunque lo intentes</p>
+                <div class="botones">
+                    <a href="#mensaje" class="boton" onclick="bloqueCifrar()" id="cifrar">cifrar</a>
+                    <a href="#mensaje" class="boton" onclick="bloqueDescifrar()" id="descifrar">descifrar</a>
+                </div>
+                
+            </div>
+                
+            </div>
+                
+        </section>
+            
+        <section class="inicio_derecho">
+            <div id="mensaje">
+                <img class="imagen" src="./assets/5.jpg" alt="pagina_construcion" >
+                <h2>Bienvenido joven Jedi</h2>
+                <p class="parrafo">Con mi ayuda tu mensaje podra ser encriptado o desencriptado</p>
+                
+                
+            </div>
+            
+
+            <div class="modificado" id="texto_modificado"  disabled>
+                    <p id="resultado"></p>
+                    <button class="boton_copiar" onclick="bloqueCopiar()" style="display:none;">Copiar</button>
+                                    
+            </div>
+
+            <div hidden>
+                <img src="./assets/1.jpg" alt="" >
+                <p>Ingresa un mensaje por favor</p>
+                <a href="">Volver</a>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer"> Desarrollado por SNKDANI Estudiante de Alura</footer> 
+
+</body>
+</html>

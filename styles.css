@@ -1,0 +1,194 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: var();
+    color: var();
+    box-sizing: border-box;
+}
+
+:root{
+    --fuente: 'Star Wars', sans-serif;
+    --color: #2E073F;
+}
+
+header{
+    background-color: #EBD3F8;
+    padding: 10px 0 0 10px;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:3% 2%;
+    justify-content: space-between;
+    background-color: #EBD3F8;
+}
+
+.inicio_izquierdo{
+    width: 43.75;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.62rem;
+    gap: 1.25rem;  
+}
+
+.texto{
+    text-align: center;
+    gap: 2rem;
+}
+
+.textarea{
+    width: 24rem;
+    height: 24rem;
+    padding-top: 0.6rem;
+    text-align: center;
+    background-color: var(--color);
+    color: #EBD3F8;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.87rem;
+    border-radius: 0.3rem;
+}
+
+.textarea::placeholder{
+    color: #EBD3F8;
+}
+
+.botones{
+    padding: 2rem;
+}
+
+.boton{
+    width: 50%;
+    padding: 16px;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--fuente);
+    color:var(--color_2);
+    border: 0.12px solid var(--color);
+    margin: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.boton:hover{
+    background-color: #2E073F;
+    color: #EBD3F8;
+}
+
+.inicio_derecho{
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "News Cycle", sans-serif;
+    background-color: #AD49E1;
+    border-radius: 5px;
+
+}
+
+.imagen{
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+.parrafo{
+    font-family: "Chela One", system-ui;
+    padding: 0 5.6rem;
+}
+
+.modificado{
+    font-size: 6.25rem;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.boton_copiar {
+    display: none; 
+}
+
+.footer{
+    background-color: #7A1CAC;
+    color: #EBD3F8;
+    padding: 0.75rem;
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+@media (max-width: 850px){
+    
+    .inicio{
+        flex-direction: column;
+        padding: 7%;
+    }
+
+    .inicio_izquierdo, .inicio_derecho {
+        width: 100%;
+    }
+
+    .textarea {
+        width: 100%; 
+    }
+
+    .modificado {
+        width: 100%; 
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .boton {
+        font-size: 14px; 
+        padding: 10px 15px; 
+    }
+}
+
+@media (max-width: 1120px) {
+    .inicio {
+        flex-direction: column; /* Cambia el diseño a columna para tabletas */
+        padding: 5%; /* Ajusta el padding según sea necesario */
+    }
+
+    .inicio_izquierdo, .inicio_derecho {
+        width: 100%; /* Asegura que los elementos ocupen el ancho completo */
+    }
+
+    .textarea, .modificado {
+        width: 100%; /* Asegura que los elementos de texto ocupen el ancho completo */
+    }
+
+    .footer {
+        font-size: 14px; /* Ajusta el tamaño de la fuente para tabletas */
+    }
+
+    .boton {
+        font-size: 16px; /* Ajusta el tamaño de la fuente del botón */
+        padding: 12px 18px; /* Ajusta el padding del botón */
+    }
+
+    .parrafo {
+        padding: 0 2rem; /* Reduce el padding de los párrafos en tabletas */
+    }
+}
